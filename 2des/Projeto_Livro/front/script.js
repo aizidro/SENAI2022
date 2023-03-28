@@ -18,7 +18,7 @@ cadastro.addEventListener('submit', e => {
     col5.innerHTML = cadastro.dataEmprest.value
     col6.innerHTML = cadastro.dataPrevDev.value
     col7.innerHTML = cadastro.dataDevolucao.value
-  
+
     linha.appendChild(col1)
     linha.appendChild(col2)
     linha.appendChild(col3)
@@ -27,8 +27,9 @@ cadastro.addEventListener('submit', e => {
     linha.appendChild(col6)
     linha.appendChild(col7)
     corpo.appendChild(linha)
-    valTotal += parseFloat(cadastro.valor.value)
-    total.value = valTotal 
+    
 });
 
 const jurosLivro = dataDevolucao - dataPrevDev 
+
+console.log(jurosLivro);
