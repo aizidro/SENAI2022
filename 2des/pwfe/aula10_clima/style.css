@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    border: 1px solid black;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.container header {
+    position: relative;
+}
+
+.container header #locais {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
