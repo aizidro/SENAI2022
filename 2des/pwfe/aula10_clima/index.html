@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,17 +10,25 @@
     <script src="api.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <header>
-            <aside id="clima"></aside>
+            <aside id="clima">
+                <img id="status_temp" alt="temperatura">
+                <h1 id="temperatura"></h1>
+                <div id="info">
+                    <p id="chuva"></p>
+                    <p id="umidade"></p>
+                    <p id="vento"></p>
+                </div>
+            </aside>
             <aside id="locais">
                 <h1>Clima</h1>
             </aside>
-
         </header>
-
     </div>
 </body>
 <script src="script.js"></script>
+
 </html>
