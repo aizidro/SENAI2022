@@ -25,7 +25,6 @@ api.get('/current.json?key=f78ba735e98c4112a74115818231004&q=Jaguariuna&lang=pt'
 
     })
 
-
 // Separa a data do horario e retorna apenas o horario, pois as informaçoes que pegamaos da API vem junto a data e o horario
 function getHorario(data) {
     let horario = data.localtime.split(" ", 2)
