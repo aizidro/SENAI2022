@@ -1,6 +1,7 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Montserrat:wght@400;700&family=Orbitron&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Arizonia&family=Montserrat:wght@400;700&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,7 +20,7 @@ body {
 }
 
 header {
-    top:0;
+    top: 0;
     position: absolute;
     display: flex;
     align-items: center;
@@ -30,15 +31,26 @@ header img {
     height: 150px;
 }
 
-h1{
+h1 {
     font-family: 'Arizonia';
-    color:rgb(237, 198, 126);
+    color: rgb(237, 198, 126);
     font-size: 100px;
     text-shadow:
-    -2px -2px 0 #000,
-    2px -2px 0 #000,
-    -2px 2px 0 #000,
-    2px 2px 0 #000;
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
+}
+
+h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 80px;
+    color: rgb(237, 198, 126);
+    text-shadow:
+        -2px -2px 0 #000,
+        2px -2px 0 #000,
+        -2px 2px 0 #000,
+        2px 2px 0 #000;
 }
 
 .container {
@@ -47,17 +59,29 @@ h1{
     border: 1px solid black;
     margin: auto;
     border-radius: 10px;
-    background-color: rgba(237, 198, 126,0.3);
+    background-color: rgba(237, 198, 126, 0.4);
     display: flex;
     align-items: center;
     justify-content: center;
+    border: none;
 }
 
-form{
+form {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    align-items: center;
 }
-input{
-    width: 40%;
+
+input {
+    width: 100%;
+    height: 30px;
+    border-radius: 10px;
+    background-color: rgb(237, 198, 126);
+
+}
+
+#botao{
+   width: 40%;
+   
 }

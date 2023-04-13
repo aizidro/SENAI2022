@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <link rel="stylesheet" href="./style/syle.css">
     <title>Restaurante Dede</title>
 </head>
+
 <body>
     <header>
         <h1>Pizzaria Dede</h1>
@@ -15,13 +17,15 @@
     <main>
         <div class="container">
             <form>
-                <h1>Login</h1>
-            <label for="email">Email</label>
-            <input type="text" placeholder="Email"> 
-            <label for="email">Email</label>
-            <input type="text" placeholder="Senha"> 
-        </form>
+                <h2>Login</h2>
+                <label for="email">Email</label>
+                <input type="text" id="email" name="email">
+                <label for="senha">Senha</label>
+                <input type="text" id="senha" name="senha">
+                <button id="botao" onclick="autenticar()">Autenticar</button>
+            </form>
         </div>
     </main>
 </body>
+    <script src="./script/login.js"></script>
 </html>
