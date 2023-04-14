@@ -79,7 +79,7 @@ INSERT INTO avaliacao VALUES
 (6,6, "2023/01/08",8, "Pizza Saborosa é aqui");
 
 CREATE VIEW vw_restaurante AS
-SELECT r.nome AS restaurante, cat.nome AS categoria, AVG(a.nota) AS nota
+SELECT r.id AS id, r.nome AS restaurante, cat.nome AS categoria, AVG(a.nota) AS nota
 FROM restaurante r
 INNER JOIN categoria cat ON r.categoriaId = cat.id
 LEFT JOIN avaliacao a ON r.id = a.restauranteId

@@ -9,13 +9,19 @@ fetch ("http://localhost:3000/lista")
 
 .then(data =>{
     for(element of data ){
-        let {restaurante, categoria, nota} = element
+        let {id, restaurante, categoria, nota} = element
+
         let tr = document.createElement("tr")
+
         tr.innerHTML = `
         <td>${restaurante}</td>
         <td>${categoria}</td>
         <td>${nota}</td>
         `
-        tbody.appendChild(tr)
+        tr.addEventListener("click", () => {
+            console.log(id);
+        })
+
+        tbody.appendChild(tr);
     }
 })
