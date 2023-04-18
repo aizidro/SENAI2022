@@ -17,4 +17,4 @@ INSERT INTO funcionario VALUES
 ("002","Maria Severo","2018-03-04",2200.00,DEFAULT,10,NULL),
 ("003","Silvia Silva","2019-05-20",3200.00,DEFAULT,10,NULL),
 ("004","Solange Oliveira","2020-12-11",5500.00,DEFAULT,8.5,NULL),
-("005","Mariana Pontes","2021-12-13","2350.00",DEFAULT,6,NULL);
+("005","Mariana Pontes","2021-12-13",2350.00,DEFAULT,6,NULL);
