@@ -1,0 +1,28 @@
+class Paciente{
+    nome
+    idade
+    peso
+    altura
+    imc
+    constructor(nome, idade, peso, altura){
+        this.nome = nome
+        this.idade = idade 
+        this.peso = peso
+        this.altura = altura
+        this.imc = Number((peso / altura ** 2).toFixed(2)) 
+    }
+    
+    getImc() {
+        return Number((this.peso / this.altura ** 2).toFixed(2))
+    }
+    
+}
+//Construir o Objeto
+const paciente1 = new Paciente('Jogina', 74, 48, 1.59)
+ console.log(paciente1)
+ console.log(paciente1.getImc())
+
+ const paciente2 = new Paciente('Andre',30)
+ console.log(paciente2)
+
+
