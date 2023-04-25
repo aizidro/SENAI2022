@@ -22,7 +22,7 @@ class Veiculo {
 
 class Aluguel {
     id
-    Veiculo
+    veiculo
     dataRetirada
     dataDevolucao
     valorAluguel
@@ -50,9 +50,9 @@ const veiculos = [
 const alugueis = [
     new Aluguel(1,veiculos[0],'2023-04-01','2023-04-06'),
     new Aluguel(2,veiculos[1],'2023-04-01','2023-04-08'),
-    new Aluguel(3,veiculos[2],'2023-04-07','2023-04-16'),
-    new Aluguel(4,veiculos[2],'2023-04-01','2023-04-06'),
-    new Aluguel(5,veiculos[1],'2023-04-01','2023-04-06')
+    new Aluguel(3,veiculos[2],'2023-04-02','2023-04-07'),
+    new Aluguel(4,veiculos[2],'2023-04-07','2023-04-16'),
+    new Aluguel(5,veiculos[1],'2023-04-08','2023-04-16')
 ] 
 
 console.log(alugueis)
