@@ -10,10 +10,10 @@ export default function App() {
   const [vparcela, setVparcela] = new useState(0);
 
   const calculoMontante = () => {
-    let cMontante = (valor * ((1 + (juros / 100)) ** Nparcelas)).toFixed(2)
-    setMontante(cMontante);
-    let parcelaSimples = (cMontante / Nparcelas);
-    setVparcela(parcelaSimples);
+      let cMontante = (valor * ((1 + (juros / 100)) ** Nparcelas)).toFixed(2)
+      setMontante(cMontante);
+      let parcelaSimples = (cMontante / Nparcelas);
+      setVparcela(parcelaSimples);
   } 
   return (
     <View style={styles.container}>
@@ -27,14 +27,19 @@ export default function App() {
 
       <View>
         <Text style={styles.texto}>Taxa de Juros a.m.</Text>
-        <TextInput style={styles.input} onChangeText={(val) => { setNparcelas(val); }}></TextInput>
+        <TextInput style={styles.input} onChangeText={(val) => { setJuros(val); }}></TextInput>
       </View>
 
       <View>
         <Text style={styles.texto}>N. de Parcelas</Text>
-        <TextInput style={styles.input} onChangeText={(val) => { setVparcela(val); }}></TextInput>
+        <TextInput style={styles.input} onChangeText={(val) => { setNparcelas(val); }}></TextInput>
       </View>
 
+      <TouchableOpacity onPress={calculoMontante} style={styles.button}>
+        <Text>Calcular</Text>
+      </TouchableOpacity>
+      <Text style={styles.texto}>Montante: {montante}</Text>
+      <Text style={styles.texto}>Valor da parcela: {vparcela}</Text>
     </View>
   );
 }
@@ -65,4 +70,7 @@ const styles = StyleSheet.create({
     borderRadius:'7px',
     border:'none',
   },
+  button: {
+        
+  }
 });
