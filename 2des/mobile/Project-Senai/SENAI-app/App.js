@@ -1,29 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import ead from './screen/ead'
+import home from './screen/home'
+
+const Stack = createNativeStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.header}>
-      <Text style={styles.textHeader}>SENAI</Text>
-      <StatusBar style="auto" />
-    <View style={styles.main}></View>
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen
+        name="home"
+        component={home}
+        options={{title:"Página Inicial"}} />
+        <Stack.Screen
+          name="ead"
+          component={ead}
+          options={{ title: 'Lista de Clientes' }} />
+       
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  header: {
-    flex: 1,
-    backgroundColor: '#f00',
-    alignItems: 'center',
-    width: '100vw',
-    height:'10vh',
-    justifyContent:'center',
-  },
-  textHeader: {
-    fontSize:'18px',
-    color:'#fff',
-    fontWeight:'bold',
-    fontFamily:'basic-serif'
-  }
-});
