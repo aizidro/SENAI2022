@@ -2,8 +2,15 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image } from 'react-native';
 
 export default function App({navigation}) {
-  const paginaEad = () => {
-    navigation.navigate("ead")
+  const paginaAprendizado = () => {
+    navigation.navigate("Aprendizagem Industrial")
+  }
+
+  const PaginaFic = () => {
+    navigation.navigate("fic")
+  }
+  const PaginaTecnico = () => {
+    navigation.navigate("tecnico")
   }
 
   return (
@@ -15,15 +22,15 @@ export default function App({navigation}) {
       <View style={styles.main}>
         <View style={styles.card}>
           <Image style={styles.img} source={require('../assets/imgs/cursosenaiead.png')} />
-          <Text style={styles.txt} onPress={()=>{paginaEad()}}>FORMAÇÃO INICIAL E CONTINUADA</Text>
+          <Text style={styles.txt} onPress={()=>{PaginaFic()}}>FORMAÇÃO INICIAL E CONTINUADA</Text>
         </View>
         <View style={styles.card}>
           <Image style={styles.img} source={require('../assets/imgs/senai.png')} />
-          <Text style={styles.txt}>APRENDIZAGEM INDUSTRIAL</Text>
+          <Text style={styles.txt} onPress={()=>{paginaAprendizado()}}>APRENDIZAGEM INDUSTRIAL</Text>
         </View>
         <View style={styles.card}>
           <Image style={styles.img} source={require('../assets/imgs/senaiTecnico.png')} />
-          <Text style={styles.txt}>CURSOS TÉCNICOS</Text>
+          <Text style={styles.txt} onPress={()=>{PaginaTecnico()}}>CURSOS TÉCNICOS</Text>
         </View>
       </View>
     </View>

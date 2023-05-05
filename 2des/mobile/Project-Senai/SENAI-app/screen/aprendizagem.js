@@ -1,19 +1,19 @@
 import React from 'react';
 import { View, FlatList, StyleSheet, Text, Image, TouchableOpacity } from 'react-native';
-import  CursoTecnico from '../mock/tecnico'
+import  CursoEad from '../mock/aprendizagem'
 
-export default function fic({ navigation}) {
+export default function ead({ navigation}) {
     const abrirDetalhes = (dados) => {
         navigation.navigate('Detalhes', { dados });
     }
     return (
         <View style={styles.container}>
             <FlatList
-                data={CursoTecnico}
-                style={styles.tecnico}
-                renderItem={({ item }) => <TouchableOpacity style={styles.item}onPress={()=>{abrirDetalhes(item)}}>
+                data={CursoEad}
+                style={styles.ead}
+                renderItem={({ item }) => <TouchableOpacity style={styles.item} onPress={()=>{abrirDetalhes(item)}}>
+                    <Text style={styles.curso}>{item.area}</Text>
                     <Text style={styles.titulo}>{item.curso}</Text>
-                    <Text tyle={styles.area}>{item.area}</Text>
                 </TouchableOpacity>}
             />
         </View>);
@@ -22,12 +22,15 @@ export default function fic({ navigation}) {
 
 const styles = StyleSheet.create({
     container: {
-
+        textAlign:'center',
+        
     },
-    fic: {
-
+    
+    curso: {
+        fontSize:'20px'
     },
-    item: {
-
+    area: {
+        marginTop:'20px',
+        textAlign:'center'
     }
 })
