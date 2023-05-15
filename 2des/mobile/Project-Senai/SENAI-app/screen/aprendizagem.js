@@ -12,8 +12,10 @@ export default function ead({ navigation}) {
                 data={CursoEad}
                 style={styles.ead}
                 renderItem={({ item }) => <TouchableOpacity style={styles.item} onPress={()=>{abrirDetalhes(item)}}>
-                    <Text style={styles.curso}>{item.area}</Text>
-                    <Text style={styles.titulo}>{item.curso}</Text>
+                    <Text style={styles.titulo}>{item.area}</Text>
+                    <View style={styles.card}>
+                    <Text style={styles.txt}>{item.curso}</Text>
+                    </View>
                 </TouchableOpacity>}
             />
         </View>);
@@ -22,15 +24,40 @@ export default function ead({ navigation}) {
 
 const styles = StyleSheet.create({
     container: {
-        textAlign:'center',
-        
+        flex: 1,
+        textAlign: 'center',
+        padding: 20,
     },
-    
-    curso: {
-        fontSize:'20px'
+    ead: {
+        marginVertical:50,
     },
-    area: {
-        marginTop:'20px',
-        textAlign:'center'
-    }
+
+    txt: {
+        color: '#fff',
+        fontSize: 15,
+        fontWeight: 'bold',
+        paddingBottom:15,
+        paddingTop:15
+    },
+
+    titulo: {
+        fontSize: '20px',
+        fontWeight: 'bold',
+        color: '#f00',
+    },
+    card: {
+        backgroundColor: '#f00',
+        borderRadius: 10,
+        shadowColor: '#000000',
+        shadowOffset: {
+            width: 1,
+            height: 2,
+        },
+        shadowRadius: 10,
+        elevation: 5
+    },
+    item: {
+        marginVertical:20,
+      
+    }   
 })

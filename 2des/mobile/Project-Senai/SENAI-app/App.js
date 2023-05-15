@@ -20,15 +20,15 @@ export default function App() {
         <Stack.Screen
           name="Aprendizagem Industrial"
           component={aprendizagem}
-          options={{ title: 'Lista de Clientes' }} />
+          options={{ title: 'Lista de Aprendizagem Industrial' }} />
         <Stack.Screen
           name="fic"
           component={fic}
-          options={{ title: 'Lista de Clientes' }} />
+          options={{ title: 'Lista de FIC' }} />
         <Stack.Screen
           name="tecnico"
           component={tecnico}
-          options={{ title: 'Lista de Clientes' }} />
+          options={{ title: 'Lista de cursos Tecnicos' }} />
 
             <Stack.Screen
           name="Detalhes"
