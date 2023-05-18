@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+header {
+    width: 100%;
+    height: 15vh;
+    border: 1px solid #000;
+    background-image: url('/assets/massa-de-pizza.png');
+    background-position: center;
+    background-size: cover;
+    
+}
+
+main {
+    width: 100%;
+    display: flex;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
+
+.textoPrincipal {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.card {
+    width: 500px;
+    height: 300px;
+   
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+
+}
