@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style/mola.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="modal">
+            <div class="CompriTotalMola">
+                <p>Comprimento da mola total:</p>
+                <input type="number" id="compMola">
+            </div>
+            <div class="TotalMolaCompri">
+                <p>Total da mola Comprimida:</p>
+                <input type="number" id="totalMola">
+            </div>
+
+            <button onclick="calculo()">Calcular</button>
+        </div>
+        <h3 id="resultCompressao"></h3>
+        <h3 id="resultConstante"></h3>
+    </div>
+    <!---------------->
+    <div class="container">
+        <div class="modal">
+            <div class="diametroDoFio">
+                <p>Diametro do Fio:</p>
+                <input type="number" id="diametroFio">
+            </div>
+            <div class="numeroEspiraisUteis">
+                <p>Numero de Espirais Uteis:</p>
+                <input type="number" id="NumberEspiraisUteis">
+            </div>
+            <div class="diametroMedio">
+                <p>Diametro Medio:</p>
+                <input type="number" id="diametrMedio">
+            </div>
+            <button onclick="calculo2()">Calcular</button>
+        </div>
+        <h3 id="constanteh1"></h3>
+        <h3 id="nespiraisTotais"></h3>
+        <h3 id="cargoTotal"></h3>
+    </div>
+</body>
+<script src="/scripts/mola.js"></script>
+
+</html>
