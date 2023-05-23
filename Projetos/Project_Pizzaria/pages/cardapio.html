@@ -11,24 +11,22 @@
 </head>
 
 <body>
+    
     <div class="modal">
         <div class="textoPrincipal">
-            <h1>Pizzas</h1>
-            <p>A Pizzaria Delícia's é muito mais do que apenas uma pizza saborosa. É uma experiência completa que
-                combina um ambiente acolhedor, um serviço atencioso e uma atmosfera descontraída. Traga sua família,
-                seus amigos ou desfrute de um jantar a dois em nosso espaço moderno e confortável. Nossa equipe calorosa
-                e amigável garantirá que você se sinta em casa enquanto desfruta de uma refeição memorável.</p>
+            <h1>Cardápio</h1>
         </div>
         <main>
             <div class="window hidden">
                 <header id="headerWindow">
-                    <h1 onclick="displays()">X</h1>
+                    <h1 id="x" onclick="displays()">X</h1>
                 </header>
                 <div class="corpo">
-                    <h1>Pedidos</h1>
-                    <img src="/assets/carrinho.png">
+                    <h1 id="h1Carrinho">Pedidos</h1>
+                    <img onclick="addCart()" src="/assets/carrinho.png">
                 </div>
             </div>
+    </div>
 </body>
 <script src="/scripts/cardapio.js"></script>
 

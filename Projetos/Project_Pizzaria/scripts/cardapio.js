@@ -56,3 +56,4 @@ function showInformations(posicao) {
     informacoes.classList.add('informacoes');
     window.appendChild(informacoes);
 }
+
