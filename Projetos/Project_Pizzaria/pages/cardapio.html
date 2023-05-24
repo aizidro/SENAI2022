@@ -12,10 +12,24 @@
 
 <body>
     
-    <div class="modal">
+    <aside id="menuLateral">
+        <div class="fecharMenu">
+            <h1 id="lateral">Produtos do carrinho</h1>
+            <h1 id="fechado" onclick="menuLateral()">X</h1>
+       </div>
+        <div id="listaPedidos"></div>
+    </aside>
+    <header>
         <div class="textoPrincipal">
-            <h1>Cardápio</h1>
+            <h1 id="cardapio">Cardápio</h1>
+            <img src="/assets/add-to-cart.png" id="img" onclick="menuLateral()" alt="">
         </div>
+       <a href="./pedidos.html">
+        <img src="/assets/pedido.png" alt="">
+       </a>
+    </header>
+    <div class="modal">
+        
         <main>
             <div class="window hidden">
                 <header id="headerWindow">
@@ -26,6 +40,7 @@
                     <img onclick="addCart()" src="/assets/carrinho.png">
                 </div>
             </div>
+        </main>
     </div>
 </body>
 <script src="/scripts/cardapio.js"></script>

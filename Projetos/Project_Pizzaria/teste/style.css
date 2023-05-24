@@ -1,0 +1,28 @@
+
+/* Estilos para o menu lateral */
+.sidebar {
+    width: 200px;
+    background-color: #f1f1f1;
+    height: 100%;
+    position: fixed;
+  }
+  
+  .sidebar a {
+    display: block;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+  }
+  
+  .sidebar a:hover {
+    background-color: #555;
+    color: white;
+  }
+  
+  /* Estilos para o conteúdo principal */
+  .content {
+    margin-left: 200px; /* Largura da barra lateral */
+    padding: 20px;
+  }
+  
+  
