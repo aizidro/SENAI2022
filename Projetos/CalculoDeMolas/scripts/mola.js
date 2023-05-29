@@ -8,8 +8,8 @@ function calculo() {
     const compressao_mm = CompriTotalMola - totalMolaCompri
 
     const constante = 400 / compressao_mm
-    resultadoCompressao.innerHTML = `Compressão / mm: ${constante.toFixed(0)}`
-    resultadoConstante.innerHTML = `Constante: ${compressao_mm}`
+    resultadoCompressao.innerHTML = `Compressão / mm: ${compressao_mm}`
+    resultadoConstante.innerHTML = `Constante: ${constante.toFixed(0)}`
 
     return (compressao_mm)
 }
