@@ -4,7 +4,7 @@ const info = [
         "nome": "Passos Dias Aguiar",
         "cpf": "123.456.789-01",
         "email": "passos@email.com",
-        "senha": "-2884944701",
+        "senha": "123456",
         "nascto": "2000-03-01",
         "endereco": {
             "cep": "13914-552",

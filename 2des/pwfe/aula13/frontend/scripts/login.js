@@ -2,13 +2,13 @@ const inpEmail = document.querySelector('#email')
 const inpSenha = document.querySelector('#senha')
 
 function autenticar() {
-    let email = inpEmail.value
+    let email = inpEmail.value  
     let senha = inpSenha.value
 
     let usuario = info.find((user) => {
         if ((user.email == email) && (user.senha == senha))
-            console.log({ user })
         return user
+              
     })
 
     if (usuario != undefined) {
@@ -16,11 +16,15 @@ function autenticar() {
         //     "id":usuario.id,
         //     "nome":usuario.nome
         // }
-        console.log(usuario)
+        console.log('indefinido');
         localStorage.setItem("usuario", JSON.stringify(usuario));
 
         window.location.href = "/pages/perfil.html";
+        
     } else {
-        alert("sai fora")
+        const h3 = document.querySelector('#resultado')
+        h3.textContent = "Usuario ou senha incorreto"
+        h3.style.color= "red"
+        h3.style.alignSelf = 'center'
     }
 }
