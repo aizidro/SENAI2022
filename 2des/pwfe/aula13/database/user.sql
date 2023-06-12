@@ -44,3 +44,6 @@ insert into telefones values
 (2,'19-994501020'),
 (3,'19-973201020'),
 (4,'19-971908090');
+
+
+SELECT * FROM users WHERE email = 'seu_email' AND senha = password('sua_senha');
