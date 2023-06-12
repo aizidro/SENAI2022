@@ -40,7 +40,6 @@ insert into endereco values
 
 insert into telefones values
 (1,'19-99874-8789'),
-(1,'19-992804020'),
 (2,'19-994501020'),
 (3,'19-973201020'),
 (4,'19-971908090');

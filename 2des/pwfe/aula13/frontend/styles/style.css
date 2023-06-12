@@ -19,7 +19,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 400px;
     height: 400px;
     background-color: rgba(255, 255, 255, 0.5);
@@ -66,4 +65,10 @@ p {
     border-radius: 15px;
     border: none;
     cursor: pointer;
+    font-weight: 700;
+    font-size: 17px;
+ }
+
+ button:hover{
+    background-color: rgba(255, 255, 255, 0.5);
  }

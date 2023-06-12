@@ -11,7 +11,7 @@ let query = `SELECT * FROM users WHERE email = '${email}' AND senha = password('
             }else {
                 let usuario = response[0];
     
-                delete usuario.senha;
+                //delete usuario.senha;
     
                 res.status(200).json(usuario).end();
             }
@@ -20,6 +20,59 @@ let query = `SELECT * FROM users WHERE email = '${email}' AND senha = password('
         }
     });
 }
+
+const alterar = (req, res) => {
+
+    const {email,senha,nome,cpf,nascimento,id} = req.body
+
+    let query = `UPDATE users SET email = '${email}', senha = password('${senha}'), nome = '${nome}', cpf = '${cpf}', nascimento = '${nascimento}' WHERE id = ${id}`;
+
+    con.query(query, (err, result) => {
+        if (err == null) {
+            res.json(result).status(200).end();
+        } else {
+            res.json(err).status(400).end();
+        }
+    })}
+
+    const listar = (req, res) => {
+        const {id} = req.params
+        let query = `SELECT * FROM users WHERE id = ${id}`
+        con.query(query, (err, result) => {
+            if (err == null) {
+                res.json(result).status(200).end();
+            } else {
+                res.json(err).status(400).end();
+            }
+        })}
+
+        const listarEndereco = (req, res) => {
+            const {id} = req.params
+            let query = `SELECT * FROM endereco WHERE id_users = ${id}`
+            con.query(query, (err, result) => {
+                if (err == null) {
+                    res.json(result).status(200).end();
+                } else {
+                    res.json(err).status(400).end();
+                }
+            })}
+
+            const listarTelefones = (req, res) => {
+                const {id} = req.params
+                let query = `SELECT * FROM telefones WHERE id_users = ${id}`
+                con.query(query, (err, result) => {
+                    if (err == null) {
+                        res.json(result).status(200).end();
+                    } else {
+                        res.json(err).status(400).end();
+                    }
+                })}
         
 
-    module.exports = {autenticar}
+    module.exports = {
+        autenticar,
+        alterar,
+        listar,
+        listarEndereco,
+        listarTelefones
+    }
