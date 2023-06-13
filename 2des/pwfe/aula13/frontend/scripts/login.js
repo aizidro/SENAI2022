@@ -26,7 +26,6 @@ function autenticar() {
         .then(resp => { return resp.json() })
         .then(info => {
             if (info.id != undefined) {
-                localStorage.removeItem('usuario')
                 localStorage.setItem('usuario', JSON.stringify(info));
 
                 window.location.href = "./perfil.html";

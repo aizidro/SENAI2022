@@ -67,6 +67,20 @@ const alterar = (req, res) => {
                         res.json(err).status(400).end();
                     }
                 })}
+
+                const alterarEnd = (req, res) => {
+
+                    const { id_users,  cep,  numero, complemento } = req.body
+                
+                    let query = `UPDATE endereco SET cep = '${cep}', numero = '${numero}', complemento = '${complemento}' WHERE id_users = ${id_users}`;
+                
+                    con.query(query, (err, result) => {
+                        if (err == null) {
+                            res.json(result).status(200).end();
+                        } else {
+                            res.json(err).status(400).end();
+                        }
+                    })}
         
 
     module.exports = {
@@ -74,5 +88,6 @@ const alterar = (req, res) => {
         alterar,
         listar,
         listarEndereco,
-        listarTelefones
+        listarTelefones,
+        alterarEnd
     }

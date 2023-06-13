@@ -1,5 +1,5 @@
 var userId = 0
-function informacoes() {
+async function informacoes() {
     const id = document.querySelector("#id")
     const nome = document.querySelector("#nome")
     const cpf = document.querySelector("#cpf")
@@ -11,12 +11,18 @@ function informacoes() {
     const tell = document.querySelector("#tell")
     const senha = document.querySelector("#senha")
 
-    const info = JSON.parse (localStorage.getItem('usuario')) // infomações do Usuario
-    id.textContent= info.id
-    nome.value = info.nome
-    cpf.value = info.cpf
-    email.value = info.email
-    date.value = info.nascimento
+    const info = JSON.parse(localStorage.getItem('usuario')) // infomações do Usuario
+    userId = info.id
+    const usuarioFetch = await fetch(`http://localhost:3000/listar/${userId}`)
+    const [usuario] = await usuarioFetch.json()
+
+    
+    const nasc = usuario.nascimento.substring(0,10)
+    id.textContent= usuario.id
+    nome.value = usuario.nome
+    cpf.value = usuario.cpf
+    email.value = usuario.email
+    date.value = nasc
 
     fetchEnderecos(info.id) //Ele vai chamar a função 
     .then(enderecos => {
@@ -33,7 +39,6 @@ function informacoes() {
         tell.value = listaTelefones[0].telefone
     })
     
-    userId = info.id
 }
 
 function alterar() {
@@ -50,7 +55,6 @@ function alterar() {
             'nascimento': date.value,
             'senha': senha.value
         }
-        console.log(data);
 
         const info = {
             'method': 'PUT',
@@ -63,7 +67,8 @@ function alterar() {
         fetch('http://localhost:3000/alterar', info)
         .then(response => {return response.json()})
         .then(retorno => {
-            console.log(retorno)
+
+            alterarEndereco()
         })
 }
 
@@ -80,6 +85,63 @@ async function fetchTelefones(id) {
         const telefones = await resp.json();
         return telefones;
     } catch (error) {
-        console.log(error);
+        
     }
+}
+
+function alterarTelefone() {
+    var inpTelefones = document.querySelector('#telefones')
+    const data = {
+        'id': idUser,
+        'telefone': inpTelefones.value
+    }
+
+    const info = {
+        'method': 'PUT',
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+        'body': JSON.stringify(data)
+    }
+
+    fetch('http://localhost:3000/telefone/alterar', info)
+    .then(response => {return response.json()})
+    .then(retorno => {
+        alterarEndereco()
+    })
+}
+
+// irá buscar todos os endereços do usuário
+async function fetchEnderecos(id) {
+    const response = await fetch(`http://localhost:3000/endereco/${id}`, { method: 'GET' });
+    const enderecos = await response.json();
+    return enderecos;
+}
+
+function alterarEndereco() {
+    var inpCep = document.querySelector('#cep')
+    var inpNumero = document.querySelector('#numero')
+    var inpComplemento = document.querySelector('#complemento')
+    
+    const data = {
+        'id_users': userId,
+        'cep': inpCep.value,
+        'numero': inpNumero.value,
+        'complemento': inpComplemento.value
+    }
+
+    const info = {
+        'method': 'PUT',
+        'headers': {
+            'Content-Type': 'application/json'
+        },
+        'body': JSON.stringify(data)
+    }
+
+    fetch('http://localhost:3000/alterarEnd', info)
+    .then(response => {return response.json()})
+    .then(retorno => {
+      
+    })
+    .catch(err => {console.log(err)})
 }
