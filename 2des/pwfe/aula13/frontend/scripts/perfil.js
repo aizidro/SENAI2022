@@ -42,11 +42,13 @@ async function informacoes() {
 }
 
 function alterar() {
-    const nome = document.querySelector("#nome")
+    let confirmSenha = verificarSenha()
+    console.log(confirmSenha);
+    if(confirmSenha === 2) {
+        const nome = document.querySelector("#nome")
     const cpf = document.querySelector("#cpf")
     const email = document.querySelector("#email")
     const date = document.querySelector("#date")
-    const senha = document.querySelector("#senha")
         const data = {
             'id': userId,
             'cpf': cpf.value,
@@ -67,9 +69,70 @@ function alterar() {
         fetch('http://localhost:3000/alterar', info)
         .then(response => {return response.json()})
         .then(retorno => {
-
             alterarEndereco()
         })
+    }else if(confirmSenha === 1) {
+        const nome = document.querySelector("#nome")
+        const cpf = document.querySelector("#cpf")
+        const email = document.querySelector("#email")
+        const date = document.querySelector("#date")
+        const senha = document.querySelector("#senha")
+            const data = {
+                'id': userId,
+                'cpf': cpf.value,
+                'nome': nome.value,
+                'email': email.value,
+                'nascimento': date.value,
+                'senha': senha.value
+            }
+
+            const info = {
+                'method': 'PUT',
+                'headers': {
+                    'Content-Type': 'application/json'
+                },
+                'body': JSON.stringify(data)
+            }
+
+            fetch('http://localhost:3000/alterar', info)
+            .then(response => {return response.json()})
+            .then(retorno => {
+
+                alterarEndereco()
+            })
+    } else if (confirmSenha === 3) {
+        alert('As senhas não podem conter espaços em branco')
+    } else {
+        alert('Senha e confirmação de senha não conferem')
+    }
+}
+
+function verificarSenha() {
+    let senha = document.querySelector('#senha').value
+    let confirmSenha = document.querySelector('#confirma').value
+    console.log(senha, confirmSenha)
+    /*
+     * índice
+     * return 0: senhas inválidas (diferentes)
+     * return 1: senhas aceitas (alterar)
+     * return 2: inputs vazios (senhas continuam as mesmas)
+     * return 3: senhas não podem conter espaço
+     */
+
+    if(senha.length == 0 && confirmSenha.length == 0) return 2
+
+    // se as senhas forem diferentes
+    if(senha != confirmSenha) return 0
+    
+    // permite que a senha tenha letras (maiúsculas e minusculas), números e caracteres especiais
+    const regex = /^(?=.*[a-zA-Z\d@$!%*?&])[A-Za-z\d@$!%*?&]+$/;
+    if(!regex.test(senha)) return 0
+
+    if(senha.includes(' ') || confirmSenha.includes(' ')) {
+        return 3;
+    }
+
+    return 1
 }
 
 // Esse Fetch vai pedir para o Backend pesquisar os endereços com o id do Usuario
