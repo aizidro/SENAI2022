@@ -5,8 +5,8 @@ export default function Home() {
     return (
         <View style={styles.Container}>
             <Image source={require("../../assets/background.png")} style={styles.img} />
-            <View styke={styles.conteudo}>
-                <Text>Quizz Da História</Text>  
+            <View style={styles.conteudo}>
+                <Text style={styles.textPrincipal}>Quizz Da História</Text>  
             </View>
         </View>
     );
@@ -19,6 +19,15 @@ const styles = StyleSheet.create({
     },
     Container: {
         display: 1,
-        alignItems: 'center'
+        alignItems: 'center',
+        justifyContent:'center'
+    },
+    conteudo: {
+        position:'absolute',
+        alignItems:'center',
+        justifyContent:'center',
+    },
+    textPrincipal:{
+        fontSize:'30px'
     }
 })

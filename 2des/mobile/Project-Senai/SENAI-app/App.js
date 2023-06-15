@@ -16,7 +16,7 @@ export default function App() {
           name="home"
           component={home}
           options={{title:'',headerTransparent:true}}
-        />
+        />  
         <Stack.Screen
           name="Aprendizagem Industrial"
           component={aprendizagem}
