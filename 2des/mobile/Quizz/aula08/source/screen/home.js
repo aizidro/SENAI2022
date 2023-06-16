@@ -6,8 +6,12 @@ export default function Home() {
         <View style={styles.Container}>
             <Image source={require("../../assets/background.png")} style={styles.img} />
             <View style={styles.conteudo}>
-                <Text style={styles.textPrincipal}>Quizz Da História</Text>  
+                <Text style={styles.textPrincipal}>Quizz Biblico</Text>
+                <TouchableOpacity style={styles.editButton}>
+                    <Text style={styles.Button}>Iniciar</Text>
+                </TouchableOpacity>
             </View>
+
         </View>
     );
 }
@@ -18,16 +22,31 @@ const styles = StyleSheet.create({
         height: '100vh'
     },
     Container: {
-        display: 1,
+        flex: 1,
         alignItems: 'center',
-        justifyContent:'center'
+        justifyContent: 'center'
     },
     conteudo: {
-        position:'absolute',
-        alignItems:'center',
-        justifyContent:'center',
+        flex: 1,
+        position: 'absolute',
+        alignItems: 'center',
+        justifyContent: 'space-evenly'
     },
-    textPrincipal:{
-        fontSize:'30px'
+    textPrincipal: {
+        fontSize: '50px',
+        fontWeight: 'bold',
+
+    },
+    editButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '150px',
+        height: '40px',
+        backgroundColor: '#AB3434',
+        borderRadius: '10px',
+    },
+    Button: {
+        textAlign: 'center',
+        justifyContent: 'center'
     }
 })

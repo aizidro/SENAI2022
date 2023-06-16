@@ -1,0 +1,32 @@
+[
+    {
+        "Perguntas":"1 - Quantas pragas foram enviadas ao Egito?",
+        "Opcoes":["7 Pragas", "10 Pragas", "3 Pragas"],
+        "resp":1
+    },
+    {
+        "Perguntas":"2 - Quem foi lançado na cova dos leões?",
+        "Opcoes":["Paulo","José","Daniel"],
+        "resp":2
+    },
+    {
+        "Perguntas":"Qual instrumento Davi gostava de tocar?",
+        "Opcoes":["Tambor","Harpa"," Flauta"],
+        "resp":1
+    },
+    {
+        "Perguntas":" Quando Jesus nasceu, onde Ele foi colocado?",
+        "Opcoes":["Foi colocado numa cama","Foi colocado numa manjedoura."," Foi colocado em um trono."],
+        "resp":1
+    },
+    {
+        "Perguntas":" Quando a mulher com fluxo de sangue tocou nas vestes de Jesus, no que ela pensava?",
+        "Opcoes":["Se eu tão somente tocar em seu manto, ficarei curada.","Tenho que chamar a atenção de Jesus para ser curada.","Tenho que interromper o caminho de Jesus."],
+        "resp":0
+    },
+    {
+        "Perguntas":"Jesus comparou o Reino de Deus a qual semente?",
+        "Opcoes":["Ao grão de mostarda. ","Ao grão de milho.","A semente de uva."],
+        "resp":0
+    }  
+]

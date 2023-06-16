@@ -4,16 +4,25 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 const Stack = createNativeStackNavigator();
 import Home from './source/screen/home';
+import Perguntas from './source/screen/Perguntas';
 
 export default function App() {
   return (
     // Navigator é um comando que é te permite navegar entre telas
     <NavigationContainer>
-      <Stack.Navigator>
+      {/* <Stack.Navigator>
         <Stack.Screen
           name="home"
           component={Home}
-          options={{ title: '', headerTransparent: true }}
+          options={{ headerTransparent: true }}
+        />
+      </Stack.Navigator> */}
+
+      <Stack.Navigator>
+        <Stack.Screen
+          name="Quiz"
+          component={Perguntas}
+          options={{title:"", headerTransparent: true }}
         />
       </Stack.Navigator>
     </NavigationContainer>
