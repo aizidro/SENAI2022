@@ -1,13 +1,19 @@
 import React from "react";
 import { StyleSheet, TouchableOpacity, Image, View, Text } from "react-native";
 
-export default function Home() {
+export default function Home({navigation}) {
+
+function comecar(){
+    navigation.navigate('Quiz')
+}
+
+
     return (
         <View style={styles.Container}>
             <Image source={require("../../assets/background.png")} style={styles.img} />
             <View style={styles.conteudo}>
                 <Text style={styles.textPrincipal}>Quizz Biblico</Text>
-                <TouchableOpacity style={styles.editButton}>
+                <TouchableOpacity style={styles.editButton} onPress={comecar}>
                     <Text style={styles.Button}>Iniciar</Text>
                 </TouchableOpacity>
             </View>

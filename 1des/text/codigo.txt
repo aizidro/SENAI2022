@@ -1,0 +1,111 @@
+import React from "react";
+import { StyleSheet, TouchableOpacity, Image, View, Text } from "react-native";
+import perguntas from '../../mocks/perguntas.json'
+import { useState } from "react";
+
+export default function Perguntas({ navigation }) {
+    const [contador, setContador] = useState(0);
+    const [acerto, setAcerto] = useState(0);
+    const [erro, setErro] = useState(0);
+    const perguntaAtual = perguntas[contador];
+
+    function mudarPergunta() {
+        if(contador == 4) {
+            mudarPagina()
+        } else {
+            setContador(contador + 1);
+            console.log(contador)
+        }
+    }
+    function mudarPagina() {
+        setContador(contador + 1);
+        navigation.navigate('Result', {'acertos':acerto,'erros':erro})
+    }
+
+    const verificaResposta = (index) => {
+        console.log({ index, resp: perguntas[contador].resp });
+        // if (contador <= 5) {
+        //     return
+        // }
+        if (index == perguntas[contador].resp) {
+            alert('Parabens Voce acertou :)')
+            setAcerto(acerto + 1)
+        } else {
+            alert('resposta errada :(')
+            setErro(erro + 1)
+        }
+    }
+
+    return (
+        <View style={styles.container}>
+            <Image source={require("../../assets/background.png")} style={styles.img} />
+            <Text style={styles.h1}>Pergunta {contador + 1}</Text>
+            <View style={styles.Quest}>
+                {contador < 5 && (<><Text style={styles.Perguntas}>{perguntas[contador].Perguntas}</Text>
+                    <View style={styles.alternativas}>
+                        {perguntas[contador].Opcoes.map((item, index) => {
+                            return (
+                                <TouchableOpacity
+                                    key={index}
+                                    onPress={() => {verificaResposta(index),mudarPergunta()}}>
+                                    <Text style={styles.Opcoes}>{item}</Text>
+                                </TouchableOpacity>
+                            )
+                        })}
+                    </View>
+                    </>)}
+               
+                
+
+            </View>
+
+        </View>
+    );
+}
+
+const styles = StyleSheet.create({
+    container: {
+        alignItems: 'center',
+        justifyContent: "center",
+        width: '100vw',
+        height: '100vh'
+    },
+    img: {
+        width: '100vw',
+        height: '100vh'
+    },
+    h1: {
+        position: 'absolute',
+        top: 0,
+        fontSize: '30px',
+    },
+    Quest: {
+        position: 'absolute',
+        alignItems: 'center',
+        gap: 20
+    },
+    alternativas: {
+        marginTop: 'auto',
+        gap: 20,
+
+    },
+    Perguntas: {
+        fontSize: 20
+    },
+    Opcoes: {
+        fontSize: 20,
+        backgroundColor: 'rgba(237, 173, 82,0.4)'
+    },
+    editButton: {
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: 100,
+        height: 30,
+        backgroundColor: 'red',
+        borderRadius: 10
+    },
+    Next: {
+        textAlign: 'center',
+        justifyContent: 'center'
+    }
+})

@@ -1,7 +1,11 @@
 [
     {
         "Perguntas":"1 - Quantas pragas foram enviadas ao Egito?",
-        "Opcoes":["7 Pragas", "10 Pragas", "3 Pragas"],
+        "Opcoes":[
+            "7 Pragas", 
+            "10 Pragas", 
+            "3 Pragas"
+        ],
         "resp":1
     },
     {
