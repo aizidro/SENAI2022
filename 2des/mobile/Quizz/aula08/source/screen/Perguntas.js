@@ -8,10 +8,11 @@ export default function Perguntas({ navigation }) {
   const [erro, setErro] = useState(0);
   const perguntaAtual = perguntas[contador];
   const [opcoesSelecionadas, setOpcoesSelecionadas] = useState(Array(perguntaAtual.Opcoes.length).fill(false));
+  const [desabilitado, setDesabilitado] = useState(false)
 
 
   function mudarPergunta() {
-    if (contador === 4) {
+    if (contador === 5) {
       mudarPagina();
     } else {
       setContador(contador + 1);
@@ -24,12 +25,14 @@ export default function Perguntas({ navigation }) {
   }
 
   const verificaResposta = (index) => {
+    setDesabilitado(true)
     const respCorreta = perguntas[contador].resp;
     const opcoesAtualizadas = opcoesSelecionadas.map((valor, i) => (i === index));
     setOpcoesSelecionadas(opcoesAtualizadas);
 
     const timer = setTimeout(() => {
         mudarPergunta();
+        setDesabilitado(false)
       }, 1000); // 5 segundos
 
     if (index === respCorreta) {
@@ -51,9 +54,11 @@ export default function Perguntas({ navigation }) {
             <TouchableOpacity
               key={index}
               onPress={() => verificaResposta(index)}
+              disabled={desabilitado}
               style={[
                 styles.opcao,
                 opcoesSelecionadas[index] && (index === perguntas[contador].resp ? styles.opcaoCorreta : styles.opcaoIncorreta)
+
               ]}
             >
               <Text style={styles.Opcoes}>{item}</Text>
@@ -82,16 +87,20 @@ const styles = StyleSheet.create({
     fontSize: '30px',
   },
   Quest: {
+    width:300,
     position: 'absolute',
     alignItems: 'center',
+    textAlign:'center',
     gap: 20
   },
   alternativas: {
     marginTop: 'auto',
     gap: 20,
+    width:300
   },
   Perguntas: {
-    fontSize: 20
+    fontSize: 25,
+    alignSelf:'center'
   },
   opcao: {
     padding: 10,

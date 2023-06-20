@@ -59,8 +59,6 @@ function testaValor() {
         }
     }
 
-
-
 }
 
 function recebeConstante(potencia1, potencia2, potencia3) {

@@ -12,7 +12,9 @@ function comecar(){
         <View style={styles.Container}>
             <Image source={require("../../assets/background.png")} style={styles.img} />
             <View style={styles.conteudo}>
-                <Text style={styles.textPrincipal}>Quizz Biblico</Text>
+                <Text style={styles.textPrincipal}>Quizz</Text>
+                <Image source={require("../../assets/Jesus.png")}style={styles.Jesus}></Image>
+                <Text style={styles.textPrincipal}> Biblico</Text>
                 <TouchableOpacity style={styles.editButton} onPress={comecar}>
                     <Text style={styles.Button}>Iniciar</Text>
                 </TouchableOpacity>
@@ -39,16 +41,20 @@ const styles = StyleSheet.create({
         justifyContent: 'space-evenly'
     },
     textPrincipal: {
-        fontSize: '50px',
+        fontSize: '60px',
         fontWeight: 'bold',
 
+    },
+    Jesus:{
+        width:200,
+        height:200
     },
     editButton: {
         alignItems: 'center',
         justifyContent: 'center',
         width: '150px',
         height: '40px',
-        backgroundColor: '#AB3434',
+        backgroundColor: 'rgba(237, 173, 82,0.7)',
         borderRadius: '10px',
     },
     Button: {
