@@ -15,7 +15,7 @@ npx expo install react-native-web@~0.19.6 react-dom@18.2.0 @expo/webpack-config
 
 <p style='font-size:13px'><b>react-native-web@~0.19.6</b>: Isso indica que você deseja instalar a versão 0.19.6 do pacote react-native-web. O react-native-web é um projeto que permite renderizar componentes React Native em um ambiente de navegador, permitindo que você compartilhe parte do código entre seus aplicativos móveis e web.</p>
 
-Se ocorreu um erro exclua a pasta <b>node_modules</b> e execute o comando <b>yarn</b>, e se der mais um erro execute o comando
+Se ocorreu um erro exclua a pasta <b>node_modules</b> e execute o comando <b>yarn</b> e em seguida execute o <b>npx expo start</b>
 
 <hr>
 
