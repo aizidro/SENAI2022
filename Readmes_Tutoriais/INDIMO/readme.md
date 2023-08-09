@@ -38,27 +38,27 @@ yarn add @react-navigation/native
 ```shel
  yarn add react-native-safe-area-context
 ```
-<p style='font-size:13px'><b>yarn add react-native-safe-area-context</b>As áreas seguras são as regiões ao redor da tela que garantem que o conteúdo não seja cortado, como a parte superior onde fica a barra de status e a parte inferior onde fica a barra de navegação.</p>
+<p style='font-size:13px'><b>#yarn add react-native-safe-area-context </b>As áreas seguras são as regiões ao redor da tela que garantem que o conteúdo não seja cortado, como a parte superior onde fica a barra de status e a parte inferior onde fica a barra de navegação.</p>
 
 ```shel
 yarn add react-native-screens
 ```
-<p style='font-size:13px'><b> yarn add react-native-screens</b> que otimiza a navegação entre as telas do seu aplicativo. Ela oferece uma implementação nativa de telas para melhor desempenho e eficiência.</p>
+<p style='font-size:13px'><b>#yarn add react-native-screens</b> que otimiza a navegação entre as telas do seu aplicativo. Ela oferece uma implementação nativa de telas para melhor desempenho e eficiência.</p>
 
 ```shel
 yarn add react-native-svg
 ```
-<p style='font-size:13px'><b>yarn add react-native-svg</b>que permite renderizar gráficos vetoriais escaláveis (SVG) no seu aplicativo React Native. Isso é útil para criar elementos gráficos e ícones com qualidade de imagem em várias resoluções de tela.</p>
+<p style='font-size:13px'><b>#yarn add react-native-svg</b>que permite renderizar gráficos vetoriais escaláveis (SVG) no seu aplicativo React Native. Isso é útil para criar elementos gráficos e ícones com qualidade de imagem em várias resoluções de tela.</p>
 
 ```shel
 yarn add @react-navigation/native-stack
 ```
-<p style='font-size:13px'><b> yarn add @react-navigation/native-stack</b>A navegação de pilha é comumente usada para empilhar telas umas sobre as outras, permitindo que os usuários naveguem para trás e para frente.</p>
+<p style='font-size:13px'><b>#yarn add @react-navigation/native-stack</b>A navegação de pilha é comumente usada para empilhar telas umas sobre as outras, permitindo que os usuários naveguem para trás e para frente.</p>
 
 ```shel
 yarn add react-native-mask-input
 ```
-<p style='font-size:13px'><b> yarn add react-native-mask-input</b>fornece um componente de entrada de texto com máscara. Isso é útil quando você deseja formatar ou validar entradas de texto de acordo com um padrão específico, como números de telefone, CPFs ou datas.</p>
+<p style='font-size:13px'><b>#yarn add react-native-mask-input</b>fornece um componente de entrada de texto com máscara. Isso é útil quando você deseja formatar ou validar entradas de texto de acordo com um padrão específico, como números de telefone, CPFs ou datas.</p>
 
 
 Em seguida o terminal vai pedir para você instalar a seguinte dependência
