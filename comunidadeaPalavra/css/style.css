@@ -5,11 +5,11 @@
 }
 @font-face {
     font-family:'Xtreem_2_PersonalUse';
-    src: url('./fonts/Xtreem_2_PersonalUse.ttf');
+    src: url('../frontend/fonts/Xtreem_2_PersonalUse.ttf');
 }
 @font-face {
     font-family:'AwanZamanHeavyUse';
-    src: url('./fonts/AwanZamanHeavy.ttf');
+    src: url('../frontend/fonts/AwanZamanHeavy.ttf');
 }
 
 header {
@@ -61,4 +61,36 @@ a:hover{
    font-size: 70px;
    color: #fff;
     font-weight: 500;
+}
+
+.carrosel-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position:center;
+    background-size: cover;
+    flex-direction: row;
+}
+
+img{
+    width: 100%;
+    height: 1000px;
+}
+
+.prev-button,
+.next-button {
+    position: absolute;
+    top: 70%;
+    transform: translateY(-50%);
+    font-size: 40px;
+    cursor: pointer;
+    color: white;
+}
+
+.prev-button {
+    left: 40px;
+}
+
+.next-button {
+    right: 40px;
 }
