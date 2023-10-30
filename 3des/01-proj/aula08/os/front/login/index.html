@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../assets/icone.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <title>OS (Ordens de Serviço)</title>
+</head>
+
+<body>
+    <header>
+        <h1>OS</h1>
+        <h3 id="titulo">Ordens de Serviço</h3>
+    </header>
+    <main>
+        <form id="login">
+            <label for="matricula" class="textDecoration1">Matrícula:</label>
+            <input type="number" name="matricula" required>
+            <label for="pin" class="textDecoration1">PIM:</label>
+            <input type="password" name="pin" required>
+            <div class="buttons">
+                <input type="button" class="botao" onclick="toggleMenu()" value="Cadastro">
+            <input type="submit"  class="botao" value="Login">
+            </div>
+        </form>
+        <section id="cadastro" class="modal oculto">
+            <form id="formCadastro">
+                <label for="matricula"  class="textDecoration2">Matrícula:</label>
+                <input type="text" name="matricula" required>
+                <label for="nome" class="textDecoration2">Nome:</label>
+                <input type="text" name="nome" required>
+                <label for="cargo" class="textDecoration2">Cargo:</label>
+                <input type="text" name="cargo" required>
+                <label for="setor" class="textDecoration2">Setor:</label>
+                <input type="text" name="setor" required>
+                <label for="pin" class="textDecoration2">PIM:</label>
+                <input type="password" name="pin" required>
+                <label for="confirmPin">Confirma PIM:</label>
+                <input type="password" name="confirmPin" required>
+                <input type="button" class="botao" value="Cancelar" onclick="toggleMenu()">
+                <input type="submit" class="botao" value="Salvar">
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p id="msg"></p>
+        <h2>Sistema de Gestão de Ordens de Serviço</h2>
+        <h3 id="textFooter">By Professor Wellington</h3>
+    </footer>
+</body>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,173 @@
+@import url(../style.css);
+@import url('https://fonts.googleapis.com/css2?family=Play&family=Teko&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../assets/ordem-de-servidor-para-que-porque.jpeg');
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+
+}
+
+header {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: 'Teko', sans-serif;
+    color: #f7f7f7;
+    /* Cor azul */
+    text-shadow: 2px 2px 4px #000;
+    /* Efeito de sombra */
+}
+
+#titulo {
+    font-family: 'Play', sans-serif;
+    font-size: 37px;
+    margin-top: 23px;
+    letter-spacing: -1px;
+    color: rgb(54, 204, 204);
+    text-shadow: 2px 2px 4px #000;
+}
+
+.textDecoration1{
+    color: #f7f7f7;
+    font-size: 40px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.textDecoration2{
+    color: #f7f7f7;
+    font-size: 30px;
+    text-shadow: 2px 2px 4px #000;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 80%;
+}
+
+#login {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255, 0.3);
+    width: 650px;
+    height: 500px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: 2px solid #000;
+    text-shadow: 4px 4px 4px #000;
+}
+
+input[type=number],
+input[type=password] {
+    width: 350px;
+    height: 30px;
+    margin: 10px;
+    border: none;
+    background-color: transparent;
+    border-bottom: 3px solid #000;
+    outline: none;
+    font-size: 24px;
+    text-align: center;
+}
+
+input[type=text]{
+    width: 400px;
+    height: 30px;
+    margin: 10px;
+    font-size: 20px;
+    border: none;
+    background-color: rgb(255, 255, 255,0.8);
+    border-radius: 25px;
+    outline: none;
+    text-align: center;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: 70px;
+}
+
+.botao{
+    width: 200px;
+    height: 30px;
+    color: #ffffff;
+    background-color: rgb(54, 204, 204);
+    margin: 10px;
+    border-radius: 30px;
+    border: none;
+    transition: .5s;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border: 1px solid #000;
+}
+
+.botao:hover{
+    background-color: rgb(39, 228, 228);
+}
+
+
+#textFooter {
+    font-size: 20px;
+}
+
+
+.oculto {
+    display: none !important;
+}
+
+#cadastro{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(255, 255, 255, 0.3);
+    width: 650px;
+    height: 600px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    border: 2px solid #000;
+}
+
+#formCadastro{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgb(255, 255, 255, 0.4);
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    bottom: 0;
+    height: 10%;
+    line-height: 1;
+    border: 1px solid #000;
+}
